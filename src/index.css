@@ -1,0 +1,64 @@
+
+
+.bg-creamlight {
+background-color: #fff7ec;
+}
+
+.bg-creamdark {
+background-color: #F0E4D3;
+}
+
+.bg-brown {
+    background-color: rgb(56, 47, 42);
+}
+
+.bg-green {
+    background-color: rgb(82, 98, 82);
+}
+
+.bg-creamdark2 {
+    background-color: rgb(127, 117, 102);
+}
+
+.bg-green:hover {
+    background-color: rgba(75, 94, 75, 0.816);
+    transition: 0.5s all ease;
+    -webkit-transition: 0.5s all ease;
+    -moz-transition: 0.5s all ease;
+    -ms-transition: 0.5s all ease;
+    -o-transition: 0.5s all ease;
+}
+
+
+.text-creamlight {
+    color: #fff7ec;
+}
+
+.text-creamdark {
+    color: #F0E4D3;
+}
+
+.text-creamdark2 {
+    color: rgb(127, 117, 102);
+}
+
+.text-brown {
+    color: rgb(56, 47, 42);
+}
+
+.text-green {
+    color: rgb(82, 98, 82);
+}
+
+.text-initial {
+    font-family: math;
+}
+
+.text-number {
+    font-family: initial;
+}
+.logo {
+    font-family: monospace;
+}
+
+@import "tailwindcss";
