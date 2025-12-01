@@ -5,6 +5,7 @@ import { PiCoffeeBeanFill } from "react-icons/pi";
 import { SiCoffeescript } from "react-icons/si";
 import Typewriter from "typewriter-effect";
 
+
 export default function Landing() {
   const [counter, setCounter] = useState(0);
 
@@ -24,16 +25,16 @@ export default function Landing() {
     <>
       {/* Side images */}
       <img
-        className="w-100 mt-28 absolute right-0"
+        className="w-87 mt-35 absolute right-0"
         src="public/file_00000000628c71fdb8cbae4160e823a5.png"
       />
       <img
-        className="w-100 mt-28 absolute left-0"
+        className="w-87 mt-35 absolute left-0"
         src="public/IMG_20251126_113936.png"
       />
 
       {/* Main hero section */}
-      <div className="flex flex-col justify-center mt-23 items-center">
+      <div className="flex flex-col justify-center mt-16 items-center">
         <p className="text-4xl font-semibold text-number text-green">
           {counter}
         </p>
@@ -41,14 +42,14 @@ export default function Landing() {
           A pack of coffee is sold every weekend
         </p>
 
-        <h1 className="text-9xl font-semibold text-initial text-brown mt-3">
+        <h1 className="text-[7.5rem] font-semibold text-initial text-brown">
           Coffee For
         </h1>
-        <h1 className="text-9xl font-semibold text-initial text-brown mt-3 leading-15">
+        <h1 className="text-[7.5rem] font-semibold text-initial text-brown leading-5">
           Calm Mornings
         </h1>
 
-        <p className="font-semibold text-lg leading-25 text-green">
+        <p className="font-semibold text-lg leading-30 text-green">
           <Typewriter
             onInit={(type) => {
               type
@@ -82,8 +83,8 @@ export default function Landing() {
       {/* Feature section */}
       <div className="flex justify-center items-center">
         <img
-          className="w-215 py-8 z-10"
-          src="public/headerimg.png"
+          className="w-140 py-8 z-10"
+          src="public/IMG_20251125_232833 - Copy.png"
         />
 
         <div>

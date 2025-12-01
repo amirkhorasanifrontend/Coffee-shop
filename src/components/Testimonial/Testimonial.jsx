@@ -23,39 +23,12 @@ const data = [
   {
     id: 3,
     stars: 5,
-    text: "I've never felt more connected to my coffee. Everything about Alder feels purposeful and grounded.",
-    name: "Marcus H.",
-    location: "Brooklyn",
-    avatar:
-      "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=200&h=200&fit=crop&crop=faces",
-  },
-  {
-    id: 4,
-    stars: 5,
     text: "It's like the coffee version of self-care. No more mindless cups for me.",
     name: "Claire N.",
     location: "Denver",
     avatar:
       "https://images.unsplash.com/photo-1548142813-c348350df52b?w=200&h=200&fit=crop&crop=faces",
-  },
-  {
-    id: 5,
-    stars: 5,
-    text: "The Calm Blend helps me slow down and reconnect with myself before the day begins. It's smooth, comforting, and genuinely grounding.",
-    name: "Lila M.",
-    location: "San Francisco",
-    avatar:
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop&crop=faces",
-  },
-  {
-    id: 6,
-    stars: 5,
-    text: "The quality is unreal. You can taste the difference — and knowing it's ethically sourced makes it even better.",
-    name: "Jen L.",
-    location: "Portland",
-    avatar:
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop&crop=faces",
-  },
+  }
 ];
 
 function Star({ filled }) {
@@ -85,20 +58,20 @@ export default function Testimonials() {
         text="slow mornings with Alder"
       />
 
-      <div className="max-w-7xl mx-auto pt-4">
+      <div className="max-w-6xl mx-auto pt-4">
         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {data.map(({ id, stars, text, name, location, avatar }) => (
             <article
               key={id}
-              className="relative bg-creamdark p-6 rounded-2xl shadow-sm ring-1 ring-white/30 border border-transparent transition-transform duration-400 hover:shadow-xl hover:scale-102"
+              className="relative bg-creamdark p-2 rounded-2xl shadow-sm ring-1 ring-white/30 border border-transparent transition-transform duration-400 hover:shadow-xl hover:scale-102"
             >
-              <div className="mb-3 text-green">
+              <div className="pb-2 text-green">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star key={i} filled={i < stars} />
                 ))}
               </div>
 
-              <blockquote className="text-creamdark2 font-semibold leading-relaxed mb-4">
+              <blockquote className="text-creamdark2 text-[15px] font-semibold leading-relaxed mb-4">
                 “{text}”
               </blockquote>
 
@@ -106,7 +79,7 @@ export default function Testimonials() {
                 <img
                   src={avatar}
                   alt={name}
-                  className="w-14 h-14 rounded-full object-cover border border-white shadow"
+                  className="w-12 h-12 rounded-full object-cover border shadow"
                 />
 
                 <div className="text-sm">

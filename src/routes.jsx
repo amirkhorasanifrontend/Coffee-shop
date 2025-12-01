@@ -6,7 +6,7 @@ import ArticleInfo from "./pages/ArticleInfo/ArticleInfo"
 
 const routes = [
     {path: '/', element: <Home />},
-    {path: '/course-info:courseName', element: <CourseInfo />},
+    {path: '/course-info', element: <CourseInfo />},
     {path: '/explore', element: <Explore />},
     {path: '/article-info:articleName', element: <ArticleInfo />},
 ]

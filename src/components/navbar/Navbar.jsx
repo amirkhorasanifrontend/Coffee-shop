@@ -1,61 +1,57 @@
 import React from "react";
-import { FiShoppingCart } from "react-icons/fi";
 import { HiShoppingBag, HiMiniMoon } from "react-icons/hi2";
 import { BiSolidUser } from "react-icons/bi";
-import { RiSearchFill } from "react-icons/ri";
-import { IoSearchCircleSharp } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
-import { GiCoffeeBeans } from "react-icons/gi";
+import { BiSolidSearch } from "react-icons/bi";
+
+const Dropdown = ({ title, items }) => (
+  <li className="relative group cursor-pointer flex items-center gap-1 transition duration-300 hover:translate-y-1">
+    {title} <IoIosArrowDown />
+    <ul className="absolute top-6 pt-4 hidden group-hover:block bg-creamlight shadow-xl rounded-xl leading-8 text-brown">
+      {items.map((item, i) => (
+        <li
+          key={i}
+          className={`w-40 p-2 text-center hover:bg-black/5 ${
+            i !== items.length - 1 ? "border-b-2 border-black/20" : ""
+          }`}
+        >
+          {item}
+        </li>
+      ))}
+    </ul>
+  </li>
+);
 
 export default function Topbar() {
   return (
-    <div className="fixed w-full top-0 px-5 py-3.5 shadow-lg z-50 bg-creamlight">
-      <ul className="flex gap-6 items-center font-semibold text-brown">
+  <>
+    <div className="fixed top-0 z-50 text-sm py-1 text-center font-semibold w-full bg-creamdark">
+      <p>Free Shipping Always. Get 10% off your first ritual with code: SLOWMORNINGS</p>
+    </div>
+    <div className="fixed w-full top-7 py-1.5 px-5 z-50 bg-creamlight">
+      <div className="flex justify-between items-center text-[15px] text-brown font-semibold">
 
-        {/* Logo */}
-        <li className="flex items-center">
-          <GiCoffeeBeans className="text-5xl" />
-          <p className="text-4xl ml-1 font-black text-initial">Coffee</p>
-        </li>
+        {/* Left Side */}
+        <ul className="flex gap-6 items-center">
+          <li>Home</li>
+          <li>Explore</li>
 
-        {/* Search */}
-        <li className="relative">
-          <input
-            type="text"
-            placeholder="Search Coffee"
-            className="bg-black/10 px-4 h-12 w-65 rounded-4xl"
+          <Dropdown
+            title="Single Coffee"
+            items={[
+              "Colombia",
+              "Ethiopia",
+              "Chocolate",
+              "Brazil",
+              "Costa Rica",
+              "Kenya-AA",
+              "Sumatra",
+            ]}
           />
-          <IoSearchCircleSharp className="absolute text-5xl top-0 right-0.5" />
-        </li>
 
-        {/* Main menu */}
-        <li>Home</li>
-        <li>Explore</li>
-
-        {/* Single Coffee dropdown */}
-        <li className="flex items-center gap-1 cursor-pointer transition-all ease-in-out duration-300 hover:translate-y-2 group relative">
-          Single Coffee <IoIosArrowDown />
-          <ul className="text-green top-6 pt-4 absolute hidden group-hover:block shadow-lg leading-8 rounded-xl bg-creamlight">
-            {["Colombia", "Ethiopia", "Chocolate", "Brazil", "Costa Rica", "Kenya-AA", "Sumatra"].map(
-              (item, index) => (
-                <li
-                  key={index}
-                  className={`hover:bg-black/5 text-center p-2 ${
-                    index !== 6 ? "border-b-2 border-black/30" : ""
-                  } w-40`}
-                >
-                  {item}
-                </li>
-              )
-            )}
-          </ul>
-        </li>
-
-        {/* Blended Coffee dropdown */}
-        <li className="flex items-center gap-1 cursor-pointer transition-all ease-in-out duration-300 hover:translate-y-2 group relative">
-          Blended Coffee <IoIosArrowDown />
-          <ul className="text-green top-6 pt-4 absolute hidden group-hover:block shadow-lg leading-8 rounded-xl bg-creamlight">
-            {[
+          <Dropdown
+            title="Blended Coffee"
+            items={[
               "Daily Blend",
               "House Blend",
               "Morning Blend",
@@ -64,43 +60,43 @@ export default function Topbar() {
               "Harmony Blend",
               "Golden Blend",
               "Balanced Blend",
-            ].map((item, index) => (
-              <li
-                key={index}
-                className={`hover:bg-black/5 text-center p-2 ${
-                  index !== 7 ? "border-b-2 border-black/30" : ""
-                } w-40`}
-              >
-                {item}
-              </li>
-            ))}
-          </ul>
-        </li>
+            ]}
+          />
+          <li>Products</li>
+        </ul>
 
-        <li>Products</li>
-        <li>About</li>
-        <li>FAQs</li>
+        {/* Right Side */}
+        <ul className="flex gap-6 items-center">
+          <li>About</li>
+          <li>FAQs</li>
 
-        {/* Buttons */}
-        <li>
-          <button className="cursor-pointer bg-black/10 p-3 text-2xl rounded-4xl transition-all ease-in-out duration-300 hover:translate-y-1">
-            <HiMiniMoon />
-          </button>
-        </li>
+          <li>
+            <button className="text-2xl rounded-4xl transition hover:translate-y-1">
+              <BiSolidSearch />
+            </button>
+          </li>
 
-        <li>
-          <button className="cursor-pointer bg-black/10 p-3 text-2xl rounded-4xl transition-all ease-in-out duration-300 hover:translate-y-1">
-            <HiShoppingBag />
-          </button>
-        </li>
+          <li>
+            <button className=" text-2xl rounded-4xl transition hover:translate-y-1">
+              <HiMiniMoon />
+            </button>
+          </li>
 
-        <li>
-          <button className="cursor-pointer w-35 bg-black/10 p-3 text-2xl rounded-4xl transition-all ease-in-out duration-300 hover:translate-y-1">
-            <BiSolidUser />
-          </button>
-        </li>
+          <li>
+            <button className="text-2xl rounded-4xl transition hover:translate-y-1">
+              <HiShoppingBag />
+            </button>
+          </li>
 
-      </ul>
+          <li>
+            <button className="text-2xl rounded-4xl transition hover:translate-y-1">
+              <BiSolidUser />
+            </button>
+          </li>
+
+        </ul>
+      </div>
     </div>
+    </>
   );
 }

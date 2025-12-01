@@ -4,7 +4,7 @@ import { GiCrown } from "react-icons/gi";
 
 export default function Benefits() {
   return (
-    <div className="flex justify-center bg-creamdark relative py-10 gap-10">
+    <div className="flex justify-center relative py-10 gap-10">
 
       <div className="flex border-r-2 pr-10 border-black/30">
         <LuTruck className="text-5xl mr-4 text-green" />
