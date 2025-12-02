@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="bg-brown text-gray-200 pt-16 pb-6 relative">
+    <footer className="bg-brown text-gray-200 pt-16 pb-6 mt-10 relative">
 
       {/* Top Circle */}
       <div className="absolute -top-5 left-1/2 -translate-x-1/2">

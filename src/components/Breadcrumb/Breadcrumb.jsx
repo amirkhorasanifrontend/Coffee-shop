@@ -8,7 +8,7 @@ export default function Breadcrumb({ links }) {
       <div className="flex py-5 justify-center mt-17">
         <div className="bg-creamdark w-full max-w-6xl border-4 border-green-950/10 rounded-2xl shadow-lg flex items-center justify-between px-6 py-4">
           <ul className="flex text-brown items-center gap-2">
-            <div className='text-[27px] bg-black/10 p-0.5 rounded-lg' >
+            <div className='text-[27px] rounded-lg' >
                 <HiMiniHome />
             </div>
             {links.map((link, index) => (
