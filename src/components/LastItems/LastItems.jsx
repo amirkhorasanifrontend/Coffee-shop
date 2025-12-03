@@ -1,10 +1,11 @@
 import React from 'react'
 import SectionHeader from '../SectionHeader/SectionHeader'
-import ItemsBox from '../itemsbox/ItemsBox'
+import Products from '../Products/products'
 import AboutUs from '../Benefits/Benefits'
 import PopularItems from '../popularItems/PopularItems'
 import MassagesUsers from '../Testimonial/Testimonial'
 import ScrollingTicker from '../scrollingticker/ScrollingTicker'
+import productsData from '../../data/Products';
 
 export default function LastItems() {
   return (
@@ -14,7 +15,7 @@ export default function LastItems() {
                 title='The newest coffees'
                 text='Every day is diffrent, and so is every morning.'
             />
-        <ItemsBox />
+        <Products products={productsData} />
         <AboutUs />
     </div>
     <ScrollingTicker />

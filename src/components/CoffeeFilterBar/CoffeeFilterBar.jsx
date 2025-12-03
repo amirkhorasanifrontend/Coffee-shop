@@ -1,5 +1,4 @@
 import React from 'react';
-import { RiSearchLine } from 'react-icons/ri';
 
 const CoffeeFilterBar = () => {
   const categories = ['Popular', 'Espresso', 'Cold Brew', 'Light Roast', 'Dark Roast'];
@@ -20,16 +19,7 @@ const CoffeeFilterBar = () => {
         </div>
 
         {/* جستجو */}
-        <div className="relative w-60">
-          <input
-            type="text"
-            placeholder="Search Coffee ..."
-            className="w-full bg-black/10 px-3 py-1 rounded-xl border-0"
-          />
-          <button className="absolute right-2 top-1.5 text-xl cursor-pointer">
-            <RiSearchLine />
-          </button>
-        </div>
+        
       </div>
     </div>
   );
